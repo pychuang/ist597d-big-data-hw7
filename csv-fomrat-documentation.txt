@@ -1,0 +1,15 @@
+The XML parser outputs to a valid CSV format.
+
+Each column represents either a document ID, article title, author name, keyword, or abstract.
+
+Columns are variable/jagged depending on the number of elements per document.
+
+The data in each column is prefixed with an identifier of the datatype:
+
+I: Document ID, Integer, sequential ID based on order originally parsed.
+T: Article Title, String, The title of the article (can have multiple diue to republications or translations)
+N: Author Name, String, The name of the article's author (can have multiple)
+K: Keyword, String, A keyword defined by the XML (can have multiple)
+A: Abstract, String, The abstract for the article (can have multiple, such as a brief cover length and a full length)
+
+All columns are free of commas (,) or double quotation marks ("), as well as line breaks (\n or \r).
